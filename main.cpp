@@ -11,7 +11,12 @@ vector<char> File_read() {
         exit(0);
     }
     else {
-        vector<char> file;
+        txt_file.seekg(0, ios::end);
+        int fileSize = txt_file.tellg();
+        txt_file.seekg(0, ios::beg);
+
+        vector<char> file(fileSize, 0);
+        txt_file.read(file.data(), fileSize);
         return file;
     }
 }
