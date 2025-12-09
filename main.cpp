@@ -1,11 +1,19 @@
 #include <iostream>
 #include <vector>
+#include <fstream>
 
 using namespace std;
 
 vector<char> File_read() {
-    vector<char> file;
-    return file;
+    ifstream txt_file("Текстовый файл.txt");
+    if(!txt_file.is_open()) {
+        cout << "File open error \n";
+        exit(0);
+    }
+    else {
+        vector<char> file;
+        return file;
+    }
 }
 
 void Cout_file(vector<char> file) {
