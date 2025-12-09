@@ -3,21 +3,21 @@
 
 using namespace std;
 
-vector<string> File_read() {
-    vector<string> file;
+vector<char> File_read() {
+    vector<char> file;
     return file;
 }
 
-void Cout_file(vector<string> file) {
+void Cout_file(vector<char> file) {
 
 }
 
-void File_write(vector<string> file) {
+void File_write(vector<char> file) {
 
 }
 
 int main() {
-vector<string> file = File_read();
+vector<char> file = File_read();
 Cout_file(file);
 File_write(file);
 }
