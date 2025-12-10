@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <fstream>
 
 using namespace std;
 
@@ -14,6 +15,9 @@ void Cout_file(vector<char> file) {
 
 void File_write(vector<char> file) {
 
+    ofstream NewFile("New.txt");
+    NewFile.write(file.data(), file.size());
+    NewFile.close();
 }
 
 int main() {
