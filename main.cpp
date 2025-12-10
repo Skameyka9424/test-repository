@@ -23,10 +23,17 @@ vector<char> File_read() {
 
 void Cout_file(vector<char> file) {
 
+    for (const auto &i:file) {
+        cout << i;
+    }
+    cout << endl;
 }
 
 void File_write(vector<char> file) {
 
+    ofstream NewFile("New.txt");
+    NewFile.write(file.data(), file.size());
+    NewFile.close();
 }
 
 int main() {
